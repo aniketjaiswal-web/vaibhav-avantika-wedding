@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avantika &amp; Vaibhav – Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= REUSABLE SVG SYMBOLS ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="lotus" viewBox="0 0 40 24">
+      <path d="M20 2 C16 8 16 15 20 22 C24 15 24 8 20 2Z" fill="currentColor"/>
+      <path d="M19 21 C13 19 8 14 7 8 C12 9 16 13 19 21Z" fill="currentColor"/>
+      <path d="M21 21 C27 19 32 14 33 8 C28 9 24 13 21 21Z" fill="currentColor"/>
+      <path d="M17 22 C10 22 4 19 1 14 C7 14 13 16 17 22Z" fill="currentColor" opacity=".7"/>
+      <path d="M23 22 C30 22 36 19 39 14 C33 14 27 16 23 22Z" fill="currentColor" opacity=".7"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 15v-3l2-5h12l2 5v3M4 15h16M4 15v3h3v-3M17 15v3h3v-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="7.5" cy="12.5" r=".9" fill="currentColor"/><circle cx="16.5" cy="12.5" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-metro" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 11h14M8 21l2-4M16 21l-2-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="14" r=".9" fill="currentColor"/><circle cx="15" cy="14" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 3 3 10l6 3 3 6 3-5 6-11zM9 13l12-10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 32 24"><path d="M3 20 1 6l8 6 7-10 7 10 8-6-2 14zM3 22h26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin-solid" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12A7 7 0 0 0 5 10c0 5.8 7 12 7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="#fff"/></symbol>
+  </defs>
+</svg>
+
+<!-- ================= ENVELOPE INTRO ================= -->
+<div id="intro" aria-label="Opening the invitation">
+  <div class="intro-bg intro-closed"></div>
+  <div class="intro-bg intro-open"></div>
+  <div class="intro-glow"></div>
+  <div id="sparkles"></div>
+  <p class="intro-tap">Tap to open</p>
+</div>
+
+<!-- ================= MUSIC BUTTON ================= -->
+<button id="music-btn" aria-label="Toggle music">
+  <svg class="ic-pause" viewBox="0 0 24 24"><rect x="7" y="6" width="3.4" height="12" rx="1" fill="currentColor"/><rect x="13.6" y="6" width="3.4" height="12" rx="1" fill="currentColor"/></svg>
+  <svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+</button>
+<!-- Put your song in this folder as music.mp3 -->
+<audio id="bgm" loop preload="none" src="music.mp3"></audio>
+
+<main id="app">
+
+<!-- ================= 1. HERO ================= -->
+<section class="hero" id="hero">
+  <span class="corner corner-tl"></span>
+  <div class="bokeh" id="bokeh"></div>
+    <div class="jharokha reveal">
+    <img src="images/Ganesha Sticker.jpg" alt="Vaibhav and Avantika in a royal balcony">
+  </div>
+  <p class="eyebrow gold hero-sub">SHUBH VIVAH</p>
+  <h1 class="name">Vaibhav</h1>
+  <p class="amp">&amp;</p>
+  <h1 class="name">Avantika</h1>
+  <div class="divider gold-div"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+  <p class="hero-date">30 November 2026</p>
+  <p class="hero-venue">The Nebula club and resort · Lucknow, India</p>
+  <div class="diyas"><span class="diya"></span><span class="diya"></span></div>
+</section>
+
+<!-- ================= 2. STORY ================= 
+<section class="sec cream" id="story">
+  <p class="eyebrow">THE ROYAL CHRONICLE</p>
+  <h2 class="title dark">THEIR STORY</h2>
+  <div class="divider"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+  <p class="story-intro">It all started with a simple hello...</p>
+
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <span class="dia"></span>
+      <h3 class="tl-year">2019</h3>
+      <h4 class="tl-title">FIRST MEETING</h4>
+      <p>A friend's birthday, a crowded room, and one conversation that never really ended.</p>
+    </div>
+    <div class="tl-item reveal">
+      <span class="dia"></span>
+      <h3 class="tl-year">2020</h3>
+      <h4 class="tl-title">OUR FIRST DATE</h4>
+      <p>Cold coffee, warm fairy lights and hours that felt like minutes.</p>
+    </div>
+    <div class="tl-item reveal">
+      <span class="dia"></span>
+      <h3 class="tl-year">2025</h3>
+      <h4 class="tl-title">THE PROPOSAL</h4>
+      <p>At sunset on the old fort walls, he asked — and she said yes before he finished.</p>
+      <div class="arch-frame"><img src="images/proposal.jpeg" alt="The proposal"></div>
+    </div>
+    <div class="tl-item reveal">
+      <span class="dia"></span>
+      <h3 class="tl-year">2026</h3>
+      <h4 class="tl-title">FOREVER, DECIDED</h4>
+      <p>We decided to spend forever together, with the blessings of both our families.</p>
+    </div>
+    <div class="tl-item reveal">
+      <span class="dia"></span>
+      <h3 class="tl-year">2026</h3>
+      <h4 class="tl-title">THE WEDDING</h4>
+      <p>And now, the beginning of our happily ever after — with you.</p>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ================= 3. THE COUPLE ================= -->
+<section class="sec maroon" id="couple">
+  <p class="eyebrow gold">ROYAL PORTRAIT GALLERY</p>
+  <h2 class="title gold-t">THE COUPLE</h2>
+  <div class="divider gold-div"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+  <div class="person reveal">
+    <div class="portrait"><img src="images/groom.jpeg" alt="Vaibhav Jaiswal"></div>
+    <p class="role"></p>
+    <h3 class="pname">THE GROOM </h3>
+    
+  </div>
+
+  <div class="person reveal">
+    <div class="portrait"><img src="images/bride.jpeg" alt="Avantika Jaiswal"></div>
+    <p class="role"></p>
+    <h3 class="pname">THE BRIDE </h3>
+   
+  </div>
+</section>
+
+<!-- ================= 4. BLESSINGS ================= -->
+<section class="sec cream" id="blessings">
+  <h2 class="hindi">शुभ आशीर्वाद</h2>
+  <p class="eyebrow">WITH THE BLESSINGS OF</p>
+  <div class="divider"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+
+    <p class="fam-label"> Vaibhav</p>
+    <p class="fam-name">Grand S/o late Savitri devi & late K.k Jaiswal </p>
+    <p class="fam-name">S/o Mr.Rajesh Kumar Jaiswal & Mrs. Rekha jaiswal</p>
+    <p class="fam-sub"></p>
+
+    <p class="fam-label"> Avantika</p>
+    <p class="fam-name">Grand D/o late Manno devi Jaiswal & late Gopaldas jaiswal </p>
+    <p class="fam-name">D/o Mr.Surendra Kumar Jaiswal & Mrs. Rashmi jaiswal</p>
+    <p class="fam-sub"></p>
+  
+
+  <p class="invite-line reveal">request the honour of your presence as their children unite in the sacred bond of marriage.</p>
+</section>
+
+<!-- ================= 5. SAVE THE DATE (SCRATCH) ================= -->
+<section class="sec maroon" id="date">
+  <p class="eyebrow gold">SAVE THE ROYAL DATE</p>
+  <h2 class="title gold-t">THE AUSPICIOUS DAY</h2>
+  <div class="divider gold-div"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+  <div class="seal-wrap" id="seal">
+    <div class="seal-reveal">
+      <span class="sd-day">30</span>
+      <span class="sd-month">NOVEMBER</span>
+      <span class="sd-year">2026</span>
+    </div>
+    <canvas id="scratch"></canvas>
+    <div class="seal-cover" id="sealCover">
+      <span class="seal-mono">V·A</span>
+      <span class="seal-hint">SCRATCH THE SEAL</span>
+    </div>
+  </div>
+  <button class="reveal-link" id="revealBtn">REVEAL WITHOUT SCRATCHING</button>
+  <p class="date-line" id="dateLine">30 November 2026 · 7:00 pm onwards</p>
+  <div id="petals"></div>
+</section>
+
+<!-- ================= 6. COUNTDOWN ================= -->
+<section class="sec cream countdown-sec" id="countdown">
+  <p class="eyebrow">THE ROYAL CLOCK</p>
+  <h2 class="title dark">COUNTING THE<br>MOMENTS</h2>
+  <!-- change the wedding date/time below (YYYY-MM-DDTHH:MM:SS) -->
+  <div class="count-row" id="count" data-date="2026-11-30T19:00:00">
+    <div class="count-box"><b id="cd-d">00</b><span>DAYS</span></div>
+    <div class="count-box"><b id="cd-h">00</b><span>HOURS</span></div>
+    <div class="count-box"><b id="cd-m">00</b><span>MINUTES</span></div>
+    <div class="count-box"><b id="cd-s">00</b><span>SECONDS</span></div>
+  </div>
+</section>
+
+<!-- ================= 7. CELEBRATION / EVENTS ================= -->
+<section class="sec maroon" id="events">
+  <p class="eyebrow gold">THE ROYAL ITINERARY</p>
+  <h2 class="title gold-t">THE CELEBRATION</h2>
+  <div class="divider gold-div"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+  <!--
+    Edit each event: data-* attributes feed the popup.
+    border colour is set in style.css (.ev-1 ... .ev-5)
+  -->
+  <article class="event ev-1 reveal"
+    data-date="29 NOVEMBER 2026" data-title="HALDI / MEHENDI"
+    data-desc="A morning of turmeric, laughter and marigolds to bless the couple. / An afternoon of henna, music and joyful gossip with the family."
+    data-time="5:00 AM" data-place="98/04, Firoj Gandhi Colony, Raebareli" data-dress="Yellow &amp; Traditional">
+    <p class="ev-meta">01 · Sunday, November 29, 2026</p>
+    <h3>HALDI / MEHENDI</h3>
+    <p class="ev-time">5:00 AM ·At residence</p>
+    <span class="ev-link">VIEW DETAILS →</span>
+  </article>
+<!--
+  <article class="event ev-2 reveal"
+    data-date="29 NOVEMBER 2026" data-title="MEHENDI"
+    data-desc="An afternoon of henna, music and joyful gossip with the family."
+    data-time="5:00 PM" data-place="The Nebula Club and Resort, Ayodhyapuri, Bijnor Rd, Phase 2, Lucknow, Uttar Pradesh 226002" data-dress="Green &amp; Festive">
+    <p class="ev-meta">02 · Sunday, November 29, 2026</p>
+    <h3>MEHENDI</h3>
+    <p class="ev-time">5:00 PM · The Nebula Club and Resort</p>
+    <span class="ev-link">VIEW DETAILS →</span>
+  </article>
+
+  <article class="event ev-3 reveal"
+    data-date="29 NOVEMBER 2026" data-title="SANGEET"
+    data-desc="An evening of dance performances, songs and family rivalry on the dance floor."
+    data-time="7:30 PM" data-place="The Nebula Club and Resort, Ayodhyapuri, Bijnor Rd, Phase 2, Lucknow, Uttar Pradesh 226002" data-dress="Glamorous Indian">
+    <p class="ev-meta">03 · Sunday, November 30, 2026</p>
+    <h3>Baarat Swagat & Varmala</h3>
+    <p class="ev-time">7:30 PM · The Nebula Club and Resort</p>
+    <span class="ev-link">VIEW DETAILS →</span>
+  </article>
+  
+-->
+  <article class="event ev-4 reveal"
+    data-date="30 NOVEMBER 2026" data-title="WEDDING"
+    data-desc="The sacred vows beneath the mandap, surrounded by everyone we love."
+    data-time="9:30 PM" data-place="The Nebula Club and Resort, Ayodhyapuri, Bijnor Rd, Phase 2, Lucknow, Uttar Pradesh 226002" data-dress="Royal Traditional">
+    <p class="ev-meta">02 · Monday, November 30, 2026</p>
+    <h3>WEDDING</h3>
+    <p class="ev-time">9:30 PM · The Nebula Club and Resort</p>
+    <span class="ev-link">VIEW DETAILS →</span>
+  </article>
+<!--
+  <article class="event ev-5 reveal"
+    data-date="19 JANUARY 2027" data-title="RECEPTION"
+    data-desc="A grand evening of dinner, music and blessings for the newlyweds."
+    data-time="7:30 PM" data-place="The Nebula Club and Resort, Ayodhyapuri, Bijnor Rd, Phase 2, Lucknow, Uttar Pradesh 226002" data-dress="Formal &amp; Elegant">
+    <p class="ev-meta">05 · Sun, December 1, 2026</p>
+    <h3>RECEPTION</h3>
+    <p class="ev-time">7:30 PM · The Nebula Club and Resort</p>
+    <span class="ev-link">VIEW DETAILS →</span>
+  </article>
+</section> -->
+
+<!-- ================= 8. MAP ================= -->
+<section class="sec cream" id="map">
+  <p class="eyebrow">THE PALACE MAP</p>
+  <h2 class="title dark">THE NEBULA CLUB AND RESORT</h2>
+  <div class="divider"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+  <!-- change q=... to your venue name/address -->
+  <div class="map-frame">
+    <iframe title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/dir//Nebula+club+and+resort,+Ayodhyapuri,+Bijnor+Rd,+Phase+2,+Lucknow,+Uttar+Pradesh+226002/@24.2214048,83.2430603,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x399bfb0041da15cb:0x1726d290b9054185!2m2!1d80.9050893!2d26.7516042?hl=en_GB&entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"></iframe>
+  </div>
+  <p class="map-city">Lucknow, India</p>
+  <a class="gold-btn map-btn" target="_blank" rel="noopener"
+     href="https://www.google.com/maps/search/?api=1&query=Nebula+club+and+resort,+Ayodhyapuri,+Bijnor+Rd,+Phase+2,+Lucknow,+Uttar+Pradesh+226002">
+     <svg><use href="#i-pin-solid"/></svg> OPEN IN MAPS</a>
+<!--
+  <p class="eyebrow journey-eyebrow">YOUR JOURNEY</p>
+  <div class="journey reveal">
+    <svg><use href="#i-car"/></svg>
+    <h4>BY ROAD</h4>
+    <p>Easy access from major roads, with valet parking at the main gate.</p>
+  </div>
+  <div class="journey reveal">
+    <svg><use href="#i-metro"/></svg>
+    <h4>BY METRO</h4>
+    <p>Nearest Metro Station: Rajiv Chowk</p>
+  </div>
+  <div class="journey reveal">
+    <svg><use href="#i-plane"/></svg>
+    <h4>BY AIR</h4>
+    <p>Approx. 30 minutes from Indira Gandhi International Airport.</p>
+  </div>
+</section>
+-->
+<!-- ================= 9. GALLERY ================= -->
+<section class="sec maroon" id="gallery">
+  <p class="eyebrow gold">ROYAL PORTRAIT WALL</p>
+  <h2 class="title gold-t">MOMENTS FRAMED</h2>
+  <div class="divider gold-div"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+  <div class="gallery">
+    <figure class="g-item reveal"><img src="images/gallery-1.jpeg" alt=""></figure>
+    <figure class="g-item reveal"><img src="images/gallery-2.jpeg" alt=""></figure>
+    <figure class="g-item reveal"><img src="images/gallery-3.jpeg" alt=""></figure>
+    <figure class="g-item reveal"><img src="images/gallery-4.jpeg" alt=""></figure>
+    <figure class="g-item reveal"><img src="images/gallery-5.jpeg" alt=""></figure>
+    <figure class="g-item reveal"><img src="images/gallery-6.jpeg" alt=""></figure>
+  </div>
+</section>
+
+<!-- ================= 10. FILM ================= -->
+ <!-- 
+<section class="sec maroon dark2" id="film">
+  <p class="eyebrow gold">ROYAL CINEMA</p>
+  <h2 class="title gold-t">THEIR WEDDING FILM</h2>
+  <div class="divider gold-div"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+  -->
+
+  <!-- paste your YouTube video ID in data-youtube (e.g. dQw4w9WgXcQ) -->
+    <!--
+  <div class="film-frame" id="filmFrame" data-youtube="">
+    <button class="play-btn" aria-label="Play film"><svg viewBox="0 0 24 24"><path d="M9 6.5v11l9-5.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+  </div>
+</section>
+-->
+
+<!-- ================= 11. DARBAR GAME (QUIZ) ================= 
+<section class="sec cream" id="game">
+  <p class="eyebrow">THE DARBAR GAME</p>
+  <h2 class="title dark">WHO KNOWS THE<br>COUPLE BEST?</h2>
+  <div class="divider"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+  <div class="game-box" id="gameBox">
+    <!-- start 
+    <div class="g-start" id="gStart">
+      <p class="g-note">10 questions await at the royal court.</p>
+      <input type="text" id="playerName" placeholder="Your name" maxlength="24" autocomplete="off">
+      <button class="gold-btn wide" id="beginBtn">BEGIN THE GAME</button>
+    </div>
+
+    <!-- question 
+    <div class="g-quiz" id="gQuiz" hidden>
+      <div class="g-top"><span id="qNo">QUESTION 01</span><span id="qCount">1 / 10</span></div>
+      <div class="g-bar"><i id="qBar"></i></div>
+      <h3 class="g-q" id="qText"></h3>
+      <div class="g-opts" id="qOpts"></div>
+    </div>
+
+    <!-- result 
+    <div class="g-result" id="gResult" hidden>
+      <svg class="crown"><use href="#i-crown"/></svg>
+      <p class="eyebrow">ROYAL SCORE</p>
+      <p class="score" id="scoreBig">0 / 10</p>
+      <p class="score-msg" id="scoreMsg"></p>
+      <div class="divider"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+      <ul class="board" id="board"></ul>
+      <button class="gold-btn" id="againBtn">PLAY AGAIN</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 12. RSVP ================= -->
+<section class="sec maroon" id="rsvp">
+  <p class="eyebrow gold">ROYAL RESPONSE</p>
+  <h2 class="title gold-t">YOUR PRESENCE<br>WOULD HONOUR US</h2>
+  <div class="divider gold-div"><i></i><svg><use href="#lotus"/></svg><i></i></div>
+
+  <div class="rsvp-box" id="rsvpBox">
+    <input type="text" id="guestName" placeholder="Your full name" autocomplete="off">
+    <div class="rsvp-choice">
+      <button type="button" data-v="Joyfully Accept">JOYFULLY<br>ACCEPT</button>
+      <button type="button" data-v="Regretfully Decline">REGRETFULLY<br>DECLINE</button>
+    </div>
+    <button class="gold-btn wide" id="sendBtn" disabled>SEND RESPONSE</button>
+    <p class="rsvp-thanks" id="rsvpThanks" hidden></p>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= EVENT POPUP ================= -->
+<div class="sheet-back" id="sheetBack" hidden>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true">
+    <button class="sheet-x" id="sheetX" aria-label="Close">✕</button>
+    <p class="sh-date" id="shDate"></p>
+    <h3 id="shTitle"></h3>
+    <p class="sh-desc" id="shDesc"></p>
+    <ul class="sh-list">
+      <li><svg><use href="#i-clock"/></svg><span id="shTime"></span></li>
+      <li><svg><use href="#i-pin"/></svg><span id="shPlace"></span></li>
+      <li><svg><use href="#i-heart"/></svg><span id="shDress"></span></li>
+    </ul>
+    <a class="gold-btn wide" id="shDir" target="_blank" rel="noopener"
+       href="https://www.google.com/maps/dir//Nebula+club+and+resort,+Ayodhyapuri,+Bijnor+Rd,+Phase+2,+Lucknow,+Uttar+Pradesh+226002/@24.2214048,83.2430603,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x399bfb0041da15cb:0x1726d290b9054185!2m2!1d80.9050893!2d26.7516042?hl=en_GB&entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D">GET DIRECTIONS</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
